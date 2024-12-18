@@ -27,17 +27,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      {/* Global Styles Reset */}
-      <style>
-        {`
-          body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-        `}
-      </style>
-
+  
       {/* Top Header with Social Links */}
       <header className="hidden md:flex w-full h-12 bg-gray-800 text-white items-center px-4">
         <div className="flex items-center gap-4">
@@ -58,7 +48,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header
-        className={`bg-black backdrop-blur-xl text-white flex items-center w-full pl-0 pr-0 fixed left-0 h-auto md:h-20 z-10 shadow-md transition-all duration-300 ${
+        className={`bg-black top-0 text-white flex items-center w-full pl-0 pr-0 fixed left-0 h-auto md:h-20 z-10 shadow-md transition-all duration-300 ${
           isScrolled ? "top-0" : "md:top-12"
         }`}
       >
