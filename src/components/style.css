@@ -4,4 +4,8 @@
    background-size: cover;
 }
 
-
+.counter{
+   background: linear-gradient(rgba(16, 1, 47, 0.776), rgb(40, 3, 100)),url("/assets/p9.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}

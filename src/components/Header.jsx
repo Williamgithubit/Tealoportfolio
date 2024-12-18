@@ -33,7 +33,7 @@ const Header = () => {
       <header className="hidden md:flex md:justify-end w-full h-12 bg-gray-900 text-white items-center px-4">
         <div className="flex items-center gap-4 md:mr-5">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <FaFacebookSquare className="text-xl hover:text-blue-500 transition-colors duration-300" />
+            <FaFacebookSquare className="text-xl hover:text-blue-500 transition-colors duration-300 hover:rotate-[360deg]" />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <FaInstagramSquare className="text-xl hover:text-red-500 transition-colors duration-300" />
