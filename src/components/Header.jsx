@@ -1,24 +1,71 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import icon from '../../public/assets/arrow dropdown.svg';
-
+import { FaFacebookSquare, FaInstagramSquare, FaTwitter, FaTiktok } from "react-icons/fa";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = (menu) => {
     setIsDropdownOpen(isDropdownOpen === menu ? null : menu);
   };
 
+  // Scroll handler to adjust the header position
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Fragment>
-      <header className="bg-black backdrop-blur-xl text-white flex items-center w-full pl-0 pr-0 fixed top-0 left-0 h-auto md:h-20 z-10 shadow-md">
+      {/* Global Styles Reset */}
+      <style>
+        {`
+          body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        `}
+      </style>
+
+      {/* Top Header with Social Links */}
+      <header className="hidden md:flex w-full h-12 bg-gray-800 text-white items-center px-4">
+        <div className="flex items-center gap-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <FaFacebookSquare className="text-xl hover:text-blue-500" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagramSquare className="text-xl hover:text-pink-500" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <FaTwitter className="text-xl hover:text-blue-400" />
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <FaTiktok className="text-xl hover:text-black" />
+          </a>
+        </div>
+      </header>
+
+      {/* Main Header */}
+      <header
+        className={`bg-black backdrop-blur-xl text-white flex items-center w-full pl-0 pr-0 fixed left-0 h-auto md:h-20 z-10 shadow-md transition-all duration-300 ${
+          isScrolled ? "top-0" : "md:top-12"
+        }`}
+      >
         <div className="w-full px-4 py-4 flex justify-between items-center">
-          {/* Logo/Brand - Add your logo here */}
+          {/* Logo/Brand */}
           <div className="text-2xl font-bold">
-            <Link to="/" >Tealo</Link>
+            <Link to="/">Tealo</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -26,7 +73,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-2xl"
           >
-            <GiHamburgerMenu className="text-white"/>
+            <GiHamburgerMenu className="text-white" />
           </button>
 
           {/* Navigation */}
@@ -35,7 +82,7 @@ const Header = () => {
               isMobileMenuOpen ? "block" : "hidden"
             } md:block absolute md:relative top-full left-0 w-full md:w-auto bg-black shadow-md md:shadow-none`}
           >
-            <ul className="flex flex-col md:flex-row gap-2 md:gap-8 p-4 md:p-0">
+            <ul className="flex flex-col md:flex-row gap-2 md:gap-8 p-4 md:p-0 md:mr-2">
               <li>
                 <Link
                   to="/"
@@ -50,25 +97,13 @@ const Header = () => {
                   className="text-[18px] w-full md:w-auto flex items-center justify-between hover:text-[#fab702] hover:underline py-2 md:py-0"
                 >
                   About Me
-                  <span className="ml-2"><img src={icon} className="mt-1" alt="dropdown" /></span>
                 </button>
-                {isDropdownOpen === "about" && (
-                  <ul className="md:absolute relative left-0 mt-2 w-full md:w-48 bg-white z-20 border rounded shadow-lg">
-                    <li className="p-2 hover:bg-gray-100">
-                      <Link to="/about/team" className="block w-full">Our Team</Link>
-                    </li>
-                    <li className="p-2 hover:bg-gray-100">
-                      <Link to="/about/mission" className="block w-full">Our Mission</Link>
-                    </li>
-                  </ul>
-                )}
               </li>
               <li className="relative">
                 <button
                   className="text-[18px] w-full md:w-auto flex items-center justify-between hover:text-[#fab702] hover:underline py-2 md:py-0"
                 >
                   Our Services
-                  {/* <span className="ml-2"><img src={icon} className="mt-1" alt="dropdown" /></span> */}
                 </button>
               </li>
 
@@ -78,10 +113,36 @@ const Header = () => {
                   to="/"
                   className="text-[18px] block py-2 md:py-0 hover:text-[#fab702] hover:underline"
                 >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-[18px] block py-2 md:py-0 px-4 rounded-full bg-[#fab702] hover:bg-[#f4cc5f88] hover:text-white transition duration-200"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
+
+            {/* Social Links for Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className="flex justify-center gap-4 py-4 border-t border-gray-700">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <FaFacebookSquare className="text-xl hover:text-blue-500" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <FaInstagramSquare className="text-xl hover:text-pink-500" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <FaTwitter className="text-xl hover:text-blue-400" />
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <FaTiktok className="text-xl hover:text-black" />
+                </a>
+              </div>
+            )}
           </nav>
         </div>
       </header>
