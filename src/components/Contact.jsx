@@ -1,8 +1,38 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const Contact = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "168cd092-b5b5-4957-82e3-b3d567695627");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Message send successfully",
+        icon: "success"
+      });
+    }
+    event.target.reset();
+  };
+
   return (
     <section className="text-gray-600 body-font relative" id='contact'>
+      <form onSubmit={onSubmit}>
       <div className="container px-5 py-24 mx-auto flex flex-col-reverse sm:flex-row sm:flex-nowrap flex-wrap">
         {/* Map Section */}
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -47,7 +77,8 @@ const Contact = () => {
               type="text"
               id="name"
               name="name"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in- required"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in- "
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -58,7 +89,8 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in- required"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in- "
+              required
             />
           </div>
           <div className="relative mb-4">
@@ -68,7 +100,8 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in- required"
+              className="w-full bg-white rounded border border-gray-300 focus:border-[#fab702] focus:ring-2 focus:ring-[#fab702] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in- "
+              required
             ></textarea>
           </div>
           <button className="text-white bg-[#fab702] border-0 py-2 px-6 focus:outline-none hover:bg-[#efd58d] rounded text-lg">
@@ -76,6 +109,8 @@ const Contact = () => {
           </button>
         </div>
       </div>
+      </form>
+      
     </section>
   );
 };
