@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className="text-gray-600 body-font relative px-8" id='contact'>
+    <section className="text-gray-600 body-font relative" id='contact'>
       <div className="container px-5 py-24 mx-auto flex flex-col-reverse sm:flex-row sm:flex-nowrap flex-wrap">
         {/* Map Section */}
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">

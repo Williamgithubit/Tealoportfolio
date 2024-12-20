@@ -4,7 +4,7 @@ import image from "../../../public/assets/faq.png";
 
 function Annoucement() {
   return (
-      <section className="w-full mt-20 px-8">
+      <section className="w-full mt-20">
         <div className="heading lg:p-4 px-14 py-8">
           <h1 className="text-2xl md:text-4xl text-center font-bold mb-5">FAQ</h1>
         </div>
