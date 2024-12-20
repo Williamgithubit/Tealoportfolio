@@ -35,7 +35,7 @@ function Hero() {
           </p>
           <div>
             <a
-              href="/public/pdf/Resume.pdf"
+              href="/pdf/Resume.pdf"
               download={true}
               className="font-bold text-sm lg:text-lg rounded-xl py-3 px-11 bg-[#fab702] hover:bg-[#f4cc5f88] hover:text-white transition duration-200"
             >
