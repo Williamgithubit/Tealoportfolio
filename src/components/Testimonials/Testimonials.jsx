@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <section className="testimonial-container mx-auto flex flex-col justify-center mt-20 max-w-3xl">
       <div className="title text-center mb-8">
-        <h2 className="capitalize font-bold text-5xl leading-tight">
+        <h2 className="capitalize font-bold md:text-5x1 text-2xl leading-tight">
           Testimonial
         </h2>
         <p className="text-gray-600 mt-2">What my Clients are saying....</p>
