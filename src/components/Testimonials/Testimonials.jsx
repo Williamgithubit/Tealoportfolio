@@ -40,7 +40,7 @@ const Testimonials = () => {
           {reviews.map((review) => (
             <SplideSlide
               key={review.id}
-              className="flex items-center bg-white p-12 rounded-xl gap-4"
+              className="md:flex items-center flex-row  bg-white p-12 rounded-xl gap-4"
             >
               <img
                 className="review-img w-36 h-36 rounded-full object-cover mb-4 mx-auto"

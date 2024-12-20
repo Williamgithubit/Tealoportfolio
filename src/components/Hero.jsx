@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./style.css";
 import { MdLinkedCamera } from "react-icons/md";
 import { FaGlobe } from "react-icons/fa";
@@ -19,7 +19,7 @@ function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section w-full h-full md:h-screen flex flex-col lg:flex-row p-6 lg:p-14 items-center mt-16 lg:mt-0">
+      <section className="hero-section w-full h-full md:h-screen flex flex-col lg:flex-row p-6 lg:p-14 items-center mt-16 lg:mt-0" id="home">
         {/* Text Content */}
         <div className="w-full mt-8 text-white lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
           <p class="mb-6">
@@ -34,13 +34,13 @@ function Hero() {
             services, and online stores.
           </p>
           <div>
-            <Link
-              to="/"
+            <a
+              href="/public/pdf/Resume.pdf"
               download={true}
               className="font-bold text-sm lg:text-lg rounded-xl py-3 px-11 bg-[#fab702] hover:bg-[#f4cc5f88] hover:text-white transition duration-200"
             >
               Download CV &rarr;
-            </Link>
+            </a>
           </div>
         </div>
         {/* Image */}

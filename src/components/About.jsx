@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <section className="mt-8 px-4">
+    <section className="mt-8 px-4" id="about">
       <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-100">
         ABOUT ME
       </h1>

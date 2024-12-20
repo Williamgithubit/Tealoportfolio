@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-gray-600 body-font relative px-8" id='contact'>
       <div className="container px-5 py-24 mx-auto flex flex-col-reverse sm:flex-row sm:flex-nowrap flex-wrap">
         {/* Map Section */}
         <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -15,7 +15,7 @@ const Contact = () => {
             marginHeight="0"
             marginWidth="0"
             scrolling="no"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1544.1257658327395!2d-10.683236786162349!3d6.239652535692102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0a013af9dbaf0f%3A0x29034808ba3cbbb6!2sMawolo%20Jallah&#39;s%20Compound!5e1!3m2!1sen!2s!4v1734375803334!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.2338239763917!2d-10.686379926336022!3d6.242656593745668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0a010015e9b517%3A0x4747b56518e5631e!2sWilliam%20B%20Johnson%20Sr!5e1!3m2!1sen!2s!4v1734689029031!5m2!1sen!2s" loading="lazy"
             style={{ filter: "grayscale(0) contrast(1.2) opacity(0.4)" }}
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">

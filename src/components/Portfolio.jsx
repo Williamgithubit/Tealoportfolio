@@ -112,7 +112,7 @@ function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8">
+    <section className="w-full px-4 sm:px-6 lg:px-8" id="portfolio">
       <div className="heading py-8 text-center">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">My Portfolio</h1>
         <div className="flex flex-wrap justify-center gap-4">
