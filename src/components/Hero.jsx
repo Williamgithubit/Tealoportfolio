@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import { MdLinkedCamera } from "react-icons/md";
 import { FaGlobe } from "react-icons/fa";
@@ -21,7 +22,7 @@ function Hero() {
       <section className="hero-section w-full h-full md:h-screen flex flex-col lg:flex-row p-6 lg:p-14 items-center mt-16 lg:mt-0">
         {/* Text Content */}
         <div className="w-full mt-8 text-white lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
-          <p className="mb-6">
+          <p class="mb-6">
             <span className="text-[#fab702] font-bold text-2xl">|</span> Hello, I AM WILLIAM T. JOHNSON JR...
           </p>
           <h1 className="text-3xl lg:text-5xl font-medium leading-tight">
@@ -33,13 +34,13 @@ function Hero() {
             services, and online stores.
           </p>
           <div>
-            <a
-              href="/Resume.pdf" // Relative path to the PDF in the public directory
-              download="Resume.pdf" // Name of the downloaded file
+            <Link
+              to="/"
+              download={true}
               className="font-bold text-sm lg:text-lg rounded-xl py-3 px-11 bg-[#fab702] hover:bg-[#f4cc5f88] hover:text-white transition duration-200"
             >
               Download CV &rarr;
-            </a>
+            </Link>
           </div>
         </div>
         {/* Image */}
@@ -54,7 +55,7 @@ function Hero() {
           {services.map((box, index) => (
             <div
               key={index}
-              className="service-box lg:w-[20%] p-6 bg-white border-b-4 border-gray-400 shadow-lg rounded-lg text-center hover:bg-[#fab702] hover:text-white transition duration-200 group flex flex-col items-center hover:duration-500"
+              className="service-box lg:w-[20%] p-6 bg-white border-b-4 border-gray-400 shadow-lg rounded-lg text-center hover:bg-[#fab702]  hover:text-white transition duration-200 group flex flex-col items-center hover:duration-500"
             >
               <div className="icon-container text-5xl text-[#fab702] group-hover:text-white mb-4">
                 {React.createElement(box.icon)}
@@ -71,4 +72,3 @@ function Hero() {
 }
 
 export default Hero;
-git
