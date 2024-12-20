@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaFacebookSquare, FaInstagramSquare, FaTwitter, FaTiktok } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagramSquare, FaTwitter, FaTiktok, FaLinkedin } from "react-icons/fa";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(null);
@@ -44,12 +44,15 @@ const Header = () => {
           <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
             <FaTiktok className="text-xl hover:text-black transition-colors duration-300" />
           </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <FaLinkedin className="text-xl hover:text-blue-400 transition-colors duration-300" />
+          </a>
         </div>
       </header>
 
       {/* Main Header */}
       <header
-        className={`bg-black top-0 text-white flex items-center w-full pl-0 pr-0 fixed left-0 h-auto md:h-20 z-10 shadow-md transition-all duration-300 ${
+        className={`bg-black top-0 text-white flex items-center w-full pl-0 pr-0 fixed left-0 h-auto md:h-20 z-30 shadow-md transition-all duration-300 ${
           isScrolled ? "top-0" : "md:top-12"
         }`}
       >
