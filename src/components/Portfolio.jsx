@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { FaExternalLinkAlt } from "react-icons/fa"; // Import the icon
+import { FaExternalLinkAlt } from "react-icons/fa";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import photogr1 from "../../public/assets/ph1.jpg";
 import photogr2 from "../../public/assets/ph2.jpg";
 import mobile1 from "../../public/assets/mb1.jpg";
@@ -110,6 +112,13 @@ const categories = {
 
 function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Simulate loading time
+  }, []);
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8" id="portfolio">
@@ -150,28 +159,40 @@ function Portfolio() {
         aria-label="Portfolio Slider"
         className="pb-8"
       >
-        {categories[activeCategory].map((card, index) => (
-          <SplideSlide key={index}>
-            <div className="relative group overflow-hidden rounded-lg shadow-lg">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-64 object-cover sm:h-80 lg:h-96"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-center px-4">
-                <h2 className="text-white text-lg sm:text-xl font-bold mb-2">{card.title}</h2>
-                <p className="text-white mb-4 text-sm sm:text-base">{card.description}</p>
-                <a
-                  href={card.link}
-                  className="text-white flex items-center gap-2 font-medium hover:text-[#fab702]"
-                >
-                  <FaExternalLinkAlt className="h-5 w-5" />
-                  Visit
-                </a>
-              </div>
-            </div>
-          </SplideSlide>
-        ))}
+        {loading
+          ? Array.from({ length: 4 }).map((_, index) => (
+              <SplideSlide key={index}>
+                <div className="relative group overflow-hidden rounded-lg shadow-lg">
+                  <Skeleton height={300} baseColor="#e0e0e0" highlightColor="#f5f5f5" />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-center px-4">
+                    <Skeleton width={100} height={20} baseColor="#e0e0e0" highlightColor="#f5f5f5" />
+                    <Skeleton width={150} height={20} baseColor="#e0e0e0" highlightColor="#f5f5f5" />
+                  </div>
+                </div>
+              </SplideSlide>
+            ))
+          : categories[activeCategory].map((card, index) => (
+              <SplideSlide key={index}>
+                <div className="relative group overflow-hidden rounded-lg shadow-lg">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-64 object-cover sm:h-80 lg:h-96"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col items-center justify-center text-center px-4">
+                    <h2 className="text-white text-lg sm:text-xl font-bold mb-2">{card.title}</h2>
+                    <p className="text-white mb-4 text-sm sm:text-base">{card.description}</p>
+                    <a
+                      href={card.link}
+                      className="text-white flex items-center gap-2 font-medium hover:text-[#fab702]"
+                    >
+                      <FaExternalLinkAlt className="h-5 w-5" />
+                      Visit
+                    </a>
+                  </div>
+                </div>
+              </SplideSlide>
+            ))}
       </Splide>
     </section>
   );
