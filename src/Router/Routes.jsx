@@ -5,12 +5,9 @@ import Offline from "../components/Offline";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Offline />
-    },
-    {
-        path: "/home",
         element: <Home />
-    }
+    },
+   
 ])
 
 const Routes = () => {

@@ -51,7 +51,7 @@ function Hero() {
 
       {/* Services Section */}
       <section className="services-section w-full flex p-8 lg:p-14 text-center md:mt-[-6rem]">
-        <div className="wrapper w-full flex flex-col lg:flex-row justify-center lg:justify-around gap-6">
+        <div className="wrapper w-full flex flex-col lg:flex-row justify-center lg:justify-around ">
           {services.map((box, index) => (
             <div
               key={index}
