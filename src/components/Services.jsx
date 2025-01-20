@@ -24,12 +24,12 @@ const Services = () => {
       description:
         "Tell your product's story to engage users and boost conversation",
     },
-    {
-      icons: icon4,
-      title: "Mobile App",
-      description:
-        "Tell your product's story to engage users and boost conversation",
-    },
+    // {
+    //   icons: icon4,
+    //   title: "Mobile App",
+    //   description:
+    //     "Tell your product's story to engage users and boost conversation",
+    // },
   ];
 
   return (
@@ -45,7 +45,7 @@ const Services = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="w-full sm:w-[48%] md:w-[30%] lg:w-[23%] bg-white p-4 shadow-lg rounded-lg hover:scale-105 hover:duration-300"
+              className="w-full sm:w-[48%] md:w-[30%] lg:w-[25%] bg-white p-4 shadow-lg rounded-lg hover:scale-105 hover:duration-300"
             >
               {/* Icon */}
               <img
