@@ -36,7 +36,7 @@ const Offline = () => {
         </div>
         <h1 className="text-lg font-bold">Under Maintenance</h1>
         <p class="text-lg mb-6">
-          Hi there! I'm currently updating my portfolio to bring you an even
+          Hi there! We are currently updating this site to bring you an even
           better experience. Please check back soon!
         </p>
         <p class="text-sm">Thank you for your patience!</p>

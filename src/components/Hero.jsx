@@ -13,7 +13,7 @@ function Hero() {
     { icon: MdLinkedCamera, description: "Photography" },
     { icon: FaGlobe, description: "Web Design" },
     { icon: MdOutlineDesignServices, description: "UI/UX Design" },
-    { icon: MdOutlineAppShortcut, description: "Mobile App" },
+    // { icon: MdOutlineAppShortcut, description: "Mobile App" },
   ];
 
   return (
@@ -55,7 +55,7 @@ function Hero() {
           {services.map((box, index) => (
             <div
               key={index}
-              className="service-box lg:w-[20%] p-6 bg-white border-b-4 border-gray-400 shadow-lg rounded-lg text-center hover:bg-[#fab702]  hover:text-white transition duration-200 group flex flex-col items-center hover:duration-500"
+              className="service-box lg:w-[30%] p-6 bg-white border-b-4 border-gray-400 shadow-lg rounded-lg text-center hover:bg-[#fab702]  hover:text-white transition duration-200 group flex flex-col items-center hover:duration-500"
             >
               <div className="icon-container text-5xl text-[#fab702] group-hover:text-white mb-4">
                 {React.createElement(box.icon)}

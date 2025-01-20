@@ -19,28 +19,28 @@ const categories = {
       image: photogr1,
       title: "Photography",
       description: "Project for photography",
-      link: "#",
+      link: "/offline",
       category: "Photography",
     },
     {
       image: web1,
       title: "Web Design",
       description: "Project for Web Design",
-      link: "#",
+      link: "/offline",
       category: "Web Design",
     },
     {
       image: ui1,
       title: "UI/UX Design",
       description: "Project for UI/UX Design",
-      link: "#",
+      link: "/offline",
       category: "UI/UX Design",
     },
     {
       image: mobile1,
       title: "Mobile Apps",
       description: "Project for Mobile Apps",
-      link: "#",
+      link: "https://pvt-security.onrender.com",
       category: "Mobile Apps",
     },
   ],
@@ -49,14 +49,14 @@ const categories = {
       image: photogr1,
       title: "Photography",
       description: "Project for photography",
-      link: "#",
+      link: "/offline",
       category: "Photography",
     },
     {
       image: photogr2,
       title: "Photography",
       description: "Project for photography",
-      link: "#",
+      link: "/offline",
       category: "Photography",
     },
   ],
@@ -65,14 +65,14 @@ const categories = {
       image: web1,
       title: "Web Design",
       description: "Project for Web Design",
-      link: "#",
+      link: "https://pvt-security.onrender.com",
       category: "Web Design",
     },
     {
       image: web2,
       title: "Web Design",
       description: "Project for Web Design",
-      link: "#",
+      link: "https://williamgithubit.github.io/Logistics-website/",
       category: "Web Design",
     },
   ],
@@ -81,33 +81,33 @@ const categories = {
       image: ui1,
       title: "UI/UX Design",
       description: "Project for UI/UX Design",
-      link: "#",
+      link: "/offline",
       category: "UI/UX Design",
     },
     {
       image: ui2,
       title: "UI/UX Design",
       description: "Project for UI/UX Design",
-      link: "#",
+      link: "/offline",
       category: "UI/UX Design",
     },
   ],
-  "Mobile Apps": [
-    {
-      image: mobile1,
-      title: "Mobile Apps",
-      description: "Project for Mobile Apps",
-      link: "#",
-      category: "Mobile Apps",
-    },
-    {
-      image: mobile2,
-      title: "Mobile Apps",
-      description: "Project for Mobile Apps",
-      link: "#",
-      category: "Mobile Apps",
-    },
-  ],
+  // "Mobile Apps": [
+  //   {
+  //     image: mobile1,
+  //     title: "Mobile Apps",
+  //     description: "Project for Mobile Apps",
+  //     link: "#",
+  //     category: "Mobile Apps",
+  //   },
+  //   {
+  //     image: mobile2,
+  //     title: "Mobile Apps",
+  //     description: "Project for Mobile Apps",
+  //     link: "#",
+  //     category: "Mobile Apps",
+  //   },
+  // ],
 };
 
 function Portfolio() {
@@ -183,7 +183,7 @@ function Portfolio() {
                     <h2 className="text-white text-lg sm:text-xl font-bold mb-2">{card.title}</h2>
                     <p className="text-white mb-4 text-sm sm:text-base">{card.description}</p>
                     <a
-                      href={card.link}
+                      href={card.link} target="_blank"
                       className="text-white flex items-center gap-2 font-medium hover:text-[#fab702]"
                     >
                       <FaExternalLinkAlt className="h-5 w-5" />
