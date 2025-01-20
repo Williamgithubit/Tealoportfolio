@@ -31,7 +31,7 @@ function Hero() {
           <p className="my-6 lg:my-10 text-sm lg:text-lg font-inter">
             I specialize in designing and developing services for customers of
             all sizes, focusing on creating stylish and modern websites, web
-            services, and online stores.
+            services. Let’s bring your vision to life with design and functionality that stands out.
           </p>
           <div>
             <a
