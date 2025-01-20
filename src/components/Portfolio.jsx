@@ -16,13 +16,6 @@ import web2 from "../../public/assets/web2.jpg";
 const categories = {
   All: [
     {
-      image: photogr1,
-      title: "Photography",
-      description: "Project for photography",
-      link: "/offline",
-      category: "Photography",
-    },
-    {
       image: web1,
       title: "Web Design",
       description: "Project for Web Design",
@@ -37,28 +30,19 @@ const categories = {
       category: "UI/UX Design",
     },
     {
-      image: mobile1,
-      title: "Mobile Apps",
-      description: "Project for Mobile Apps",
-      link: "https://pvt-security.onrender.com",
-      category: "Mobile Apps",
-    },
-  ],
-  Photography: [
-    {
       image: photogr1,
       title: "Photography",
       description: "Project for photography",
       link: "/offline",
       category: "Photography",
     },
-    {
-      image: photogr2,
-      title: "Photography",
-      description: "Project for photography",
-      link: "/offline",
-      category: "Photography",
-    },
+    // {
+    //   image: mobile1,
+    //   title: "Mobile Apps",
+    //   description: "Project for Mobile Apps",
+    //   link: "https://pvt-security.onrender.com",
+    //   category: "Mobile Apps",
+    // },
   ],
   "Web Design": [
     {
@@ -90,6 +74,22 @@ const categories = {
       description: "Project for UI/UX Design",
       link: "/offline",
       category: "UI/UX Design",
+    },
+  ],
+  Photography: [
+    {
+      image: photogr1,
+      title: "Photography",
+      description: "Project for photography",
+      link: "/offline",
+      category: "Photography",
+    },
+    {
+      image: photogr2,
+      title: "Photography",
+      description: "Project for photography",
+      link: "/offline",
+      category: "Photography",
     },
   ],
   // "Mobile Apps": [

@@ -10,9 +10,9 @@ import image from "../../public/assets/3.jpg";
 function Hero() {
   // Services Data
   const services = [
-    { icon: MdLinkedCamera, description: "Photography" },
     { icon: FaGlobe, description: "Web Design" },
     { icon: MdOutlineDesignServices, description: "UI/UX Design" },
+    { icon: MdLinkedCamera, description: "Photography" },
     // { icon: MdOutlineAppShortcut, description: "Mobile App" },
   ];
 

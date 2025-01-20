@@ -7,7 +7,7 @@ const FAQ = () => {
       {/* Accordion #1 */}
       <Accordion
         title="Who are you?"
-        par1="I am William T. Johnson Jr, a passionate Front-End Developer/Designer/Photographer] with expertise in React.js. I can create a splendid project to help businesses and individuals achieve their goals."
+        par1="I am William T. Johnson Jr a Front-End Developer with a practical knowledge and experience in building responsive and user-friendly web applications. I specialize in React, Tailwind CSS, and JavaScript, and I have a strong background in creating accessible designs, optimizing performance, or collaborating with cross-functional teams."
       />
 
       {/* Accordion #2 */}
@@ -19,14 +19,14 @@ const FAQ = () => {
       {/* Accordion #2 */}
       <Accordion
         title="Where are you located?"
-        date1="October 25, 2024"
+        date1="December 28, 2024"
         par1="I am based in the West Cost of Africa to be precise Republic of Liberia, but I work with clients worldwide."
       />
 
       {/* Accordion #2 */}
       <Accordion
         title="What tools and technologies do you use?"
-        par1="I use React, Tailwind CSS, Figma, Adobe Photoshop. My choice of tools depends on the project requirements."
+        par1="I use React, Tailwind CSS, Figma, Wordpress, and GitHub. My choice of tools depends on the project requirements."
       />
     </div>
   );
