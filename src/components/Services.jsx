@@ -7,12 +7,6 @@ import icon4 from "../../public/Icons/responsive.gif";
 const Services = () => {
   const cards = [
     {
-      icons: icon1,
-      title: "Photography",
-      description:
-        "Tell your product's story to engage users and boost conversation",
-    },
-    {
       icons: icon2,
       title: "Web Design",
       description:
@@ -24,6 +18,12 @@ const Services = () => {
       description:
         "Tell your product's story to engage users and boost conversation",
     },
+    {
+      icons: icon1,
+      title: "Photography",
+      description:
+        "Tell your product's story to engage users and boost conversation",
+    }
     // {
     //   icons: icon4,
     //   title: "Mobile App",
