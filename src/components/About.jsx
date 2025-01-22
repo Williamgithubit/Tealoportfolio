@@ -1,6 +1,6 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
-import image from "../../public/assets/1.jpg";
+import image from "../../public/assets/about-me.jpg";
 
 const About = () => {
   const skills = [
