@@ -7,10 +7,10 @@ const Testimonials = () => {
   return (
     <section className="testimonial-container mx-auto flex flex-col justify-center mt-20 max-w-3xl">
       <div className="title text-center mb-8">
-        <h2 className="capitalize font-bold md:text-5x1 text-2xl leading-tight">
+        <h2 className="capitalize font-bold md:text-5x1 text-2xl leading-tight text-text-light-primary dark:text-text-dark-primary">
           Testimonial
         </h2>
-        <p className="text-gray-600 mt-2">What my Clients are saying....</p>
+        <p className="text-text-light-secondary dark:text-text-dark-secondary mt-2">What my Clients are saying....</p>
       </div>
 
       <div className="slider-container relative px-4 user-select-none">
@@ -40,7 +40,7 @@ const Testimonials = () => {
           {reviews.map((review) => (
             <SplideSlide
               key={review.id}
-              className="md:flex items-center flex-row  bg-white p-12 rounded-xl gap-4"
+              className="md:flex items-center flex-row bg-background-light-primary dark:bg-background-dark-primary p-12 rounded-xl gap-4"
             >
               <img
                 className="review-img w-36 h-36 rounded-full object-cover mb-4 mx-auto"
@@ -48,7 +48,7 @@ const Testimonials = () => {
                 alt={`${review.name}'s profile`}
               />
               <div className="content">
-                <p className="text text-gray-800 mb-4 text-lg">{review.text}</p>
+                <p className="text text-text-light-primary dark:text-text-dark-primary mb-4 text-lg">{review.text}</p>
                 <div className="info flex flex-col ">
                   <div className="rating text-orange-500 text-lg leading-none">
                     {Array.from({ length: 5 }).map((_, index) => (

@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 
 const FAQ = () => {
   return (
-    <div className="p-4 bg-gray-50">
+    <div className="p-4 bg-background-light-secondary dark:bg-background-dark-secondary">
       {/* Accordion #1 */}
       <Accordion
         title="Who are you?"
